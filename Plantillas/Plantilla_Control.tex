@@ -1,0 +1,75 @@
+\documentclass[letterpaper,11pt,oneside]{article}
+\usepackage{geometry} %diseño de páginas
+\usepackage[hidelinks]{hyperref} %para hipervínculos
+\usepackage[spanish]{babel} %español
+\usepackage[utf8]{inputenc} %input caracteres especiales
+\usepackage{fontenc} %output caracteres especiales
+\usepackage{graphicx} %gráficas
+\graphicspath{{../imagenes/}} %ruta de imágenes
+\usepackage{verbatim} %comentarios
+\usepackage{setspace} %espaciado
+\usepackage{lipsum} %texto de relleno para pruebas
+\usepackage{wrapfig} %texto alrededor de flotantes
+\usepackage{amsmath} %ambiente equation
+\usepackage{amssymb} %símbolos
+\usepackage{wasysym} %más símolos
+\usepackage{multicol} %múltiples columnas en tablas
+\usepackage{adjustbox} %ajustar tablas
+\usepackage{enumitem} %listas
+\usepackage{array} %tablas en modo matemático
+\usepackage{afterpage} %página en blanco
+\usepackage{fancyhdr} %encabezado y pie de página
+\usepackage{multirow} %múltiples filas en tablas
+
+%CONFIGURACIÓN DE PÁGINA
+\setlength{\topmargin}{-40pt}
+\setlength{\headsep}{35pt}
+\setlength{\textwidth}{460pt}
+\setlength{\oddsidemargin}{7pt}
+\setlength{\textheight}{640pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlength{\headheight}{25.3pt}
+
+%CREACION COMANDO SIGNO DE GRADO
+\newcommand{\grad}{$^{\circ}$}
+
+%USAR BULLET POINT EN EL PRIMER ITEM
+\renewcommand{\labelitemi}{$\bullet$}
+
+%ENCABEZADO
+\lhead{\textbf{Universidad Técnica Federico Santa María} \\ Departamento de Ingeniería Comercial}
+\rhead{\begin{picture}(0,0) \put(-85,-6){\includegraphics[scale=0.19]{logo_usm}} \end{picture}}
+
+%PIE DE PAGINA
+\lfoot{[Año]-S[Número Semestre]} %MODIFICAR SEGÚN CORRESPONDA
+\rfoot{\thepage}
+\cfoot{\ }
+
+\pagestyle{fancy}
+
+\begin{document}
+
+	\begin{center}
+	    %MODIFICAR SEGÚN CORRESPONDA
+		{\Large [Nombre Curso] - [Sigla Curso]}
+		%MODIFICAR SEGÚN CORRESPONDA
+		\par {\large Control N\grad [x] - [Primer/Segundo] Semestre [Año]}
+	\end{center}
+
+	\begin{center}
+	    %MODIFICAR SEGÚN CORRESPONDA
+		Profesor: [Nombre Profesor]\\
+		%MODIFICAR SEGÚN CORRESPONDA
+		Ayudante[s]: [Nombre Ayudante 1] - [Nombre Ayudante 2]
+	\end{center}
+	\ \ \\
+	Nombre: \underline{\hspace{10.4cm}}\hspace{1cm} Nota: \underline{\hspace{2.1cm}}
+	
+\section*{[Ejercicio/Problema 1]}
+
+\section*{[Ejercicio/Problema 2]}
+
+\section*{[Ejercicio/Problema ``n"]}
+
+\end{document}
