@@ -16,4 +16,4 @@ Los objetivos de este respositorio son:
 
 ## Contacto
 
-Cualquier duda o sugerencia para este repositorio es bienvenida y puede ser comunicada en los comentarios de los archivos o enviando un correo a `matias.schiaffino@alumnos.usm.cl`
+Cualquier duda, sugerencia o sugerencia para este repositorio es bienvenida y puede ser comunicada en los comentarios de los archivos o enviando un correo a `matias.schiaffino@alumnos.usm.cl`
