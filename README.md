@@ -1,6 +1,6 @@
 # Plantillas ICOM
 
-### Repositorio de plantillas LaTex para las ayudantías, controles, pautas, certámenes y memorias de Ingeniería Comercial en Universidad Técnica Federico Santa María, Valparaíso, Chile.
+## Repositorio de plantillas LaTex para las ayudantías, controles, pautas, certámenes y memorias de Ingeniería Comercial en Universidad Técnica Federico Santa María, Valparaíso, Chile.
 
 
 
