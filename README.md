@@ -14,6 +14,8 @@ Los objetivos de este respositorio son:
 
 2. Todos los campos encerrados entre corchetes ("[]") en las plantillas deben ser modificados según corresponda.
 
+3. Para que la bibliografía funcione, el archivo `BibTest.bib` que se encuentra en la carpeta `BibTex` debe ser cargado a la misma carpeta que el archivo `Plantilla_Informe` o `Plantilla_Memoria`.
+
 ## Contacto
 
 Cualquier duda, sugerencia o sugerencia para este repositorio es bienvenida y puede ser comunicada en los comentarios de los archivos o enviando un correo a `matias.schiaffino@alumnos.usm.cl`
