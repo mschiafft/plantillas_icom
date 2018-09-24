@@ -1,0 +1,115 @@
+\documentclass[letterpaper,12pt,oneside]{article}
+\usepackage{titlesec} %títulos
+\usepackage{tikz} %gráficos en latex
+	\usetikzlibrary{datavisualization}
+	\usetikzlibrary{datavisualization.formats.functions}
+	\usetikzlibrary{shapes,arrows}
+\usepackage{pgfplots} %gráficos de funciones
+	\pgfplotsset{compat=1.3}
+\usepackage{geometry} %diseño de página
+\usepackage{setspace} %espaciado
+\usepackage[hidelinks]{hyperref} %hipervículos
+\usepackage{afterpage} %página en blanco
+\usepackage[spanish,es-noshorthands]{babel} %español con tikz
+\usepackage[utf8]{inputenc} %input caracteres especiales
+\usepackage{fontenc} %output caracteres especiales
+\usepackage[mathscr]{eucal} %otras fuentes
+\usepackage{graphicx} %gráficos
+	\graphicspath{{../imagenes/}} %ruta de imágenes
+\usepackage{pst-node}
+\usepackage{fancyhdr}%encabezado y pie de página
+\usepackage{amsmath} %modo matemático
+\usepackage{amssymb} %símbolos
+\usepackage{wasysym} %más símbolos
+\usepackage{verbatim} %comentarios
+\usepackage{multicol} %múltiples columnas en tablas
+\usepackage{array} %tablas en modo matemático
+\usepackage{wrapfig} %texto alrededor de ambientes flotantes
+\usepackage{enumitem} %listas
+\usepackage{multirow} %múltiples filas en tablas
+
+%CONFIGURACIÓN DE PÁGINA	
+\setlength{\topmargin}{20pt}
+\setlength{\headheight}{50.8pt}
+\setlength{\marginparwidth}{29pt}
+\setlength{\textwidth}{490pt}
+\setlength{\voffset}{-60pt}
+\setlength{\hoffset}{-30pt}
+\setlength{\textheight}{606pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+
+%INTERLINEADO
+\renewcommand{\baselinestretch}{1.05}
+
+%CREACION COMANDO SIGNO DE GRADO
+\newcommand{\grad}{$^{\circ}$}
+
+%ENCABEZADO
+\lhead{\textbf{Universidad Técnica Federico Santa María} \\ Departamento de Ingeniería Comercial}
+\rhead{\includegraphics[scale=0.19]{logo_usm.jpg}}
+
+%PIE DE PAGINA
+\lfoot{\ }
+\rfoot{\thepage}
+\cfoot{\ }
+
+%ENCABEZADO Y PIE DE PÁGINA A TODO EL DOCUMENTO
+\pagestyle{fancy}
+
+\begin{document}
+
+\begin{titlepage}
+	\centering
+	\includegraphics[width=0.15\textwidth]{logo_usm1}\par\vspace{1cm}
+	{\scshape\LARGE Universidad Técnica Federico Santa María \par}
+	{\scshape\LARGE Departamento de Ingeniería Comercial \par}
+	\vspace{1cm}
+	{\scshape\Large Gestión Estratégica II - ICS028\par}
+	\vspace{1.5cm}
+	{\huge\bfseries Caso The Marvel Way: Restoring a Blue Ocean\par}
+	\vspace{2cm}
+	{\Large\itshape Matías Schiaffino Tyrer\par
+	Mauricio Mora Soto\par
+	Victor Reyes Plané\par}
+	\vfill
+	Prof. Dr.~Alberto \textsc{Naranjo}
+	\vfill
+	%fecha al final de la página
+	{\large 9 de agosto de 2018\par}
+\end{titlepage}
+
+Marvel es una firma con fundada en 1939, sin embargo, fue en los años 60, con la introducción del liderazgo creativo de Stan Lee, Jack Kirby y Steve Ditko, cuando lograron crear un océano azul en la industria de los comics. Fue en esta época cuando Marvel logró competir casi a la par con DC, obteniendo ganancias sobre los 6 millones de comics por mes versus los 7 millones de cómics que vendía DC.
+
+La rivalidad con DC y la pobre administración de marvel, que no motivaba, ni inspiraba a sus creativos a generar nuevos e innovadores trabajos, hicieron que se perdiera el océano azul obtenido y fueron directo a un escenario de océano rojo. Durante este periodo de alta competitividad marvel ofreció precios elevados, una pobre y deficiente cantidad de distribuidores, bajó la calidad de su contenido, realizó adquisiciones y ventas de baja rentabilidad y lideró a la industria de los comics coleccionables a una burbuja que terminó destruyendo las ventas y su reputación dentro de la industria, todo esto como una consecuencia de la extracción de valor, un enfoque de corto plazo. Fue en este punto, en 1996, cuando Marvel se declaró en bancarrota.
+
+Los años siguientes fueron complicados para Marvel. Se destacaron por una disminución en las ventas de comics en un 20\% por año. Sin embargo, fue bajo la dirección de Perlmutter y Cuneo que se logró reestructurar y estabilizar la situación cultural y financiera de la empresa, logrando ubicar nuevamente a la firma en un nuevo océano azul, donde Marvel centró su modelo de negocios en el control de la propiedad intelectual, junto con la producción de películas bajo su propio sello, es decir, innovación de valor, un enfoque de largo plazo. Aquí es donde reside el centro de atención de este caso y marvel tiene que definir claramente como tiene que mantener y aprovechar este escenario de océano azul. Y en el caso de volver a caer nuevamente en un océano rojo, ¿Cómo tiene que reaccionar Marvel? ¿Qué factores fueron los más relevantes y que pasos fueron esenciales para llevar a cabo la transición de océano rojo a océano azul?
+
+En orden para responder las preguntas antes planteadas es necesario identificar aquellas decisiones que redireccionaron a Marvel hacia este océano azul y que le están permitiendo beneficiarse actualmente de dicha posición por sobre la competencia.
+
+\textbf{Eliminar:} Luego de que Perlmutter y Cuneo asumieron la dirección de la firma, se eliminaron actividades secundarias a la producción de cómics, tales como la división de cartas coleccionables y la de juguetes. Estas suponían una cantidad importante de activos y capital dentro de la empresa, pero su manejo planteaba un gran riesgo operacional por posibles pérdidas, cosa que, en el estado en que se encontraba Marvel en ese minuto, no podía permitirse.
+
+\textbf{Reducción:} Si bien Marvel había realizado una serie de tratos con diferentes productoras de cine para obtener la liquidez suficiente para solventar gastos, a través de la venta de licencias, se decidió dejar de venderlas, ya que se estaba perdiendo una cantidad importante de dinero por no aprovechar el potencial que estas licencias estaban generando y que podrían generar para Marvel bajo su propia administración. Por otra parte, Marvel Studios también tiene una filosofía de reducción de costos a base de tomar actores menos conocidos como protagonistas y actores famosos como personajes secundarios - lo cual fue posible gracias a la fama y conexión emocional de sus personajes con el público. Además, manejan los gastos operacionales de manera austera, sin los grandes lujos de las productoras más reconocidas de Hollywood, creando una reducción de hasta el 30\% en sus producciones, sin sacrificar calidad en lo más mínimo.
+
+\textbf{Incrementar:} Fue desde la llegada de Stan Lee a Marvel que se incrementó la cantidad de personajes totalmente originales, con historias y personalidades completamente fuera de la norma establecida por DC comics. Esta cantidad de contenido original y fresco por encima de la industria los llevó a su primer océano azul. Posteriormente, con las licencias de sus personajes y la creación de su propio estudio, se incrementa la popularidad de su propiedad intelectual, cosa que se espera aumentar en el futuro.
+
+\textbf{Crear}: Marvel Studios fue esencial en la creación de valor sobre la propiedad intelectual que poseía en ese momento, permitiendo un control creativo de los personajes delegado a un grupo de personas con conocimiento y pasión dentro de la industria del cómic, creando un gran éxito tanto para Marvel Studios como para la firma en general.
+
+\begin{table}[hbt]
+	\centering
+	\resizebox{\textwidth}{!}{\begin{tabular}{|p{8.2cm} | p{8.2cm}|}
+		\hline
+		\textbf{Eliminar} & \textbf{Incrementar}\\
+		$\bullet$ Divisiones secundarias con alto riesgo operaciones. & $\bullet$ Libertad creativa a los escritores para el desarrollo de nuevas historias y personajes.\\
+		& $\bullet$ Producciones audiovisuales originales.\\
+		\hline
+		\textbf{Reducir} &\textbf{Crear}\\
+		$\bullet$ Licencias de la propiedad intelectual con potencial de desarrollo. & $\bullet$ Contenido único, innovador y diferenciado que permita mantener y crear nuevos océanos azules.\\[-0.5cm]
+		$\bullet$ Costos innecesarios en la producción de películas y series originales. & \\
+		\hline
+	\end{tabular}}
+\end{table}
+
+Marvel tuvo su primer océano azul con la industria de los cómics, y luego otro en la industria cinematográfica, aprovechando el alto valor de su propiedad intelectual el público alcanzado. Sin embargo, es necesario aclarar que el océano azul de Marvel no fue restaurado, tal y como insinúa el título del documento, sino que encontró otro innovando con las herramientas y activos que posee, ya que una vez que se torna rojo es muy difícil o imposible recuperarlo. El texto bien comenta que \textit{``calm always foreshadows a fight"}, donde, por analogía, la calma es el océano azul actual de Marvel, pero la competencia siempre intentará arrebatar parte de esos beneficios, es un riesgo inminente que se debe tener en consideración y el personal de Marvel bien lo sabe por su historia. Por lo tanto, no es suficiente explotar el escenario actual y Marvel debería estar activamente buscando nuevos océanos azules a través de la observación de los cambios en su propia y otras industrias y realizando de forma iterativa, como un proceso, un análisis como la matriz ERIC, siempre enfocándose en una innovación valor a largo plazo que le permita seguir explotando el aparentemente infinito potencial de su propiedad intelectual, el cual ha logrado prosperar y trascender generaciones por casi 80 años.
+
+\end{document}
