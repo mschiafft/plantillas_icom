@@ -1,0 +1,89 @@
+\documentclass[letterpaper,11pt,oneside]{article}
+\usepackage{geometry} %diseño de páginas
+\usepackage[hidelinks]{hyperref} %para hipervínculos
+\usepackage[spanish]{babel} %español
+\usepackage[utf8]{inputenc} %input caracteres especiales
+\usepackage{fontenc} %output caracteres especiales
+\usepackage{graphicx} %gráficas
+\graphicspath{{../imagenes/}} %ruta de imágenes
+\usepackage{verbatim} %comentarios
+\usepackage{setspace} %espaciado
+\usepackage{lipsum} %texto de relleno para pruebas
+\usepackage{wrapfig} %texto alrededor de flotantes
+\usepackage{amsmath} %ambiente equation
+\usepackage{amssymb} %símbolos
+\usepackage{wasysym} %más símolos
+\usepackage{multicol} %múltiples columnas en tablas
+\usepackage{adjustbox} %ajustar tablas
+\usepackage{enumitem} %listas
+\usepackage{array} %tablas en modo matemático
+\usepackage{afterpage} %página en blanco
+\usepackage{fancyhdr} %encabezado y pie de página
+\usepackage{multirow} %múltiples filas en tablas
+
+%CONFIGURACIÓN DE PÁGINA
+\setlength{\topmargin}{-40pt}
+\setlength{\headsep}{35pt}
+\setlength{\textwidth}{460pt}
+\setlength{\oddsidemargin}{7pt}
+\setlength{\textheight}{640pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlength{\headheight}{25.3pt}
+
+%CREACION COMANDO SIGNO DE GRADO
+\newcommand{\grad}{$^{\circ}$}
+
+%USAR BULLET POINT EN EL PRIMER ITEM
+\renewcommand{\labelitemi}{$\bullet$}
+
+%ENCABEZADO
+\lhead{\textbf{Universidad Técnica Federico Santa María} \\ Departamento de Ingeniería Comercial}
+\rhead{\begin{picture}(0,0) \put(-85,-6){\includegraphics[scale=0.19]{logo_usm}} \end{picture}}
+
+%PIE DE PAGINA
+\lfoot{2018-S2} %MODIFICAR SEGÚN CORRESPONDA
+\rfoot{\thepage}
+\cfoot{\ }
+
+\pagestyle{fancy}
+
+\begin{document}
+
+	\begin{center}
+	    %MODIFICAR SEGÚN CORRESPONDA
+		{\Large Gestión de Investigación de Operaciones - ICS010}
+		%MODIFICAR SEGÚN CORRESPONDA
+		\par {\large Control N\grad 1 - Segundo Semestre 2018}
+	\end{center}
+
+	\begin{center}
+	    %MODIFICAR SEGÚN CORRESPONDA
+		Profesor: Humberto Villalobos Torres\\
+		%MODIFICAR SEGÚN CORRESPONDA
+		Ayudantes: Alexandra Gallardo Silva - Matías Schiaffino Tyrer
+	\end{center}
+	\ \ \\
+	Nombre: \underline{\hspace{10.4cm}}\hspace{1cm} Nota: \underline{\hspace{2.1cm}}
+	
+\section*{Ejercicio 1}
+
+Una compañía elabora dos productos diferentes. Uno de ellos requiere por unidad 1/4 de hora en labores de armado, 1/8 de hora en labores de control de calidad y USD 1.2 en materias primas. El otro producto requiere por unidad 1/3 de hora en labores de armado, 1/3 de hora en labores de control de calidad y USD 0.9 en materias primas. Dadas las actuales disponibilidades de personal en la compañía, existe a lo más un total de 90 horas para armado y 80 horas para control de calidad, cada día. El primer producto descrito tiene un valor de mercado (precio de venta) de USD 9.0 por unidad y para el segundo este valor corresponde a USD 8.0 por unidad. Adicionalmente, se ha estimado que el límite máximo de ventas diarias para el primer producto descrito es de 200 unidades, no existiendo un límite máximo de ventas diarias para el segundo producto.
+
+\begin{itemize}
+	\item[a)] Formule y resuelva gráficamente un modelo de Programación Lineal que permita maximizar las utilidades de la compañía.
+	\item[b)] Considere que se pueden programar 10 horas en sobretiempo para labores de armado a un costo de USD 7.0 la hora. Sin reoptimizar, determine si es recomendable utilizar estas horas adicionales.
+	\item[c)] Determine e interprete el costo reducido de las unidades diarias para el primer producto.
+\end{itemize}
+
+\section*{Ejercicio 2}
+
+Un inversionista está evaluando invertir en dos tipos de acciones, A y B, las que tienen una rentabilidad anual que asciende a a 20\% y 10\%, respectivamente. El inversionista tiene a lo más USD 21 millones para invertir y por experiencia sabe que debería invertir al menos USD 7 millones en acciones tipo B. Además, por diversificación de riesgo, lo invertido en acciones tipo A debe ser a lo más el doble de lo invertido en acciones tipo B.
+
+\begin{itemize}
+	\item[a)] Formule y resuelva gráficamente un modelo de Programación Lineal que optimice la rentabilidad anual de la inversión.
+	\item[b)] Determine cuánto pueden cambiar las rentabilidades de cada tipo de acción de tal forma que no se vea alterada la cantidad a invertir en cada una y se conserve el sentido económico.
+	\item[c)] Conservando el retorno de las acciones tipo A y la solución óptima actual, determine cuál debería ser el retorno de las acciones tipo B para que la rentabilidad total de la inversión sea de USD 4.2 millones.
+\end{itemize}
+
+\end{document}
