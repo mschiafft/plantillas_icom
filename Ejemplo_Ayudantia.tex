@@ -1,0 +1,103 @@
+\documentclass[letterpaper,11pt,oneside]{article}
+\usepackage{geometry} %diseño de páginas
+\usepackage[hidelinks]{hyperref} %para hipervínculos
+\usepackage[spanish]{babel} %español
+\usepackage[utf8]{inputenc} %input de caracteres especiales
+\usepackage{fontenc} %output de caracteres especiales
+\usepackage{graphicx} %gráficas
+\usepackage{verbatim} %comentarios
+\usepackage{setspace} %espaciado
+\usepackage{lipsum} %texto de relleno para pruebas
+\usepackage{wrapfig} %texto alrededor de flotantes
+\usepackage{amsmath} %ambiente equation
+\usepackage{amssymb} %símbolos matemáticos (extensión)
+\usepackage{wasysym} %más símbolos
+\usepackage{multicol} %múltiples columnas en tablas
+\usepackage{adjustbox} %ajustar tablas
+\usepackage{enumitem} %layout de listas
+\usepackage{array} %tablas en modo matemático
+\usepackage{afterpage} %página en blanco
+\usepackage{fancyhdr} %pie y encabezado de página
+\usepackage{multirow} %filas múltiples en tablas
+
+%CONFIGURACIÓN DE PÁGINA
+\setlength{\topmargin}{-40pt}
+\setlength{\headsep}{35pt}
+\setlength{\textwidth}{460pt}
+\setlength{\oddsidemargin}{7pt}
+\setlength{\textheight}{640pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlength{\headheight}{25.3pt}
+
+%CREACIÓN COMANDO SIGNO DE GRADO
+\newcommand{\grad}{$^{\circ}$}
+
+%USAR BULLET POINT EN EL PRIMER ÍTEM DE LISTAS
+\renewcommand{\labelitemi}{$\bullet$}
+
+%ENCABEZADO
+\lhead{\textbf{Universidad Técnica Federico Santa María} \\ Departamento de Ingeniería Comercial}
+\rhead{\begin{picture}(0,0) \put(-85,-6){\includegraphics[scale=0.19]{logo_usm}} \end{picture}}
+
+%PIE DE PAGINA
+\lfoot{2018-S2} %MODIFICAR SEGÚN CORRESPONDA
+\rfoot{\thepage}
+\cfoot{\ }
+
+%USAR ENCABEZADO Y PIE DE PÁGINA EN TODO EL DOCUMENTO
+\pagestyle{fancy}
+
+\begin{document}
+	\begin{center}
+	    %MODIFICAR SEGÚN CORRESPONDA
+		{\Large Gestión de Investigación de Operaciones - ICS010}\\
+		%MODIFICAR SEGÚN CORRESPONDA
+		{\large Segundo Semestre - 2018}\\
+		\ \\
+		%MODIFICAR SEGÚN CORRESPONDA
+		{\large Ayudantía N\grad 1}
+	\end{center}
+
+	\begin{center}
+	    %MODIFICAR SEGÚN CORRESPONDA
+		Profesor: Humberto Villalobos Torres\\
+		%MODIFICAR SEGÚN CORRESPONDA
+		Ayudantes: Alexandra Gallardo Silva - Matías Schiaffino Tyrer
+	\end{center}
+
+\section*{Ejercicio 1: Problema de la Dieta}
+
+Ozark Farms consume diariamente un mínimo de 800 $[lb]$ de un alimento especial, el cual es una mezcla de maíz y soya con las siguientes composiciones:
+
+\begin{table}[htb]
+	\centering
+	\begin{tabular}{l c c c}
+		\hline\hline
+		& \multicolumn{2}{c}{$lb$ por $lb$ de forraje} & \\
+		\cline{2-3}
+		Forraje & Proteína & Fibra & Costo ($\$/lb$)\\
+		\hline
+		Maíz & .09 & .02 & .30\\
+		Soya & .60 & .06 & .90\\
+		\hline\hline
+	\end{tabular}
+\end{table}
+
+Las necesidades dietéticas del alimento especial son un mínimo de 30\% de proteína y un máximo de 5\% de fibra. El objetivo es determinar la mezcla diaria de alimento a un costo mínimo.
+
+\begin{itemize}
+	\item[a)] Plantee un Problema de Programación Lineal, resuélvalo utilizando el Método Gráfico y clasifique las restricciones como activas, inactivas o redundantes.
+	\item[b)] ¿Cuánto pueden variar los costos del maíz y la soya de tal forma que se conserve la solución óptima actual?
+\end{itemize}
+
+\section*{Ejercicio 2: Problema de Inversión}
+
+Una persona tiene \$15.000 para invertir en dos tipos de acciones, A y B. El tipo A tiene una rentabilidad de 9\% anual, mientras que la de tipo B tiene 5\% anual. Esta persona decide invertir como máximo \$9.000 en acciones tipo A y un mínimo de \$3.000 en las tipo B. Además, le interesa invertir en A tanto o más que en B.
+
+\begin{itemize}
+	\item[a)] Plantee un Problema de Programación Lineal que permita maximizar la rentabilidad del inversionista y resuélvalo a través del Método Gráfico.
+	\item[b)] Si es posible, determine el incremento en la rentabilidad anual por cada unidad monetaria adicional de presupuesto de tal forma que se conserve el contexto actual del problema.
+\end{itemize}
+
+\end{document}
