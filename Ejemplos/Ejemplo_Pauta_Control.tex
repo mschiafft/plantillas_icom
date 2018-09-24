@@ -1,0 +1,413 @@
+\documentclass[letterpaper,11pt,oneside]{article}
+\usepackage{geometry} %diseño de páginas
+\usepackage{tikz} %gráficos en latex
+	\usetikzlibrary{datavisualization}
+	\usetikzlibrary{datavisualization.formats.functions}
+	\usetikzlibrary{shapes,arrows}
+\usepackage{pgfplots} %gráficos de funciones
+	\pgfplotsset{compat=1.3}
+\usepackage[hidelinks]{hyperref} %para hipervínculos
+\usepackage[spanish,es-noshorthands]{babel} %español con tikz
+%\usepackage[spanish]{babel} %español
+\usepackage[utf8]{inputenc} %input caracteres especiales
+\usepackage{fontenc} %output caracteres especiales
+\usepackage{graphicx} %gráficas
+\graphicspath{{../imagenes/}} %ruta de imágenes
+\usepackage{verbatim} %comentarios
+\usepackage{setspace} %espaciado
+\usepackage{lipsum} %texto de relleno para pruebas
+\usepackage{apacite} %cita APA
+\usepackage{wrapfig} %texto alrededor de flotantes
+\usepackage{caption} %leyendas de tablas y figuras
+\usepackage{amsmath} %ambiente equation
+\usepackage{amssymb} %símbolos
+\usepackage{wasysym} %más símbolos
+\usepackage{multicol} %múltiples columnas en tablas
+\usepackage{adjustbox} %ajustar tablas
+\usepackage{enumitem} %listas
+\usepackage{array} %tablas en modo matemático
+\usepackage{afterpage} %página en blanco
+\usepackage{fancyhdr} %encabezado y pie de página
+\usepackage{multirow} %múltiples filas en tablas
+
+%CONFIGURACIÓN DE PÁGINA
+\setlength{\topmargin}{-40pt}
+\setlength{\headsep}{35pt}
+\setlength{\textwidth}{460pt}
+\setlength{\oddsidemargin}{7pt}
+\setlength{\textheight}{640pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlength{\headheight}{25.3pt}
+
+%CREACION COMANDO SIGNO DE GRADO
+\newcommand{\grad}{$^{\circ}$}
+
+%USAR BULLET POINT EN EL PRIMER ITEM
+\renewcommand{\labelitemi}{$\bullet$}
+
+%ENCABEZADO
+\lhead{\textbf{Universidad Técnica Federico Santa María} \\ Departamento de Ingeniería Comercial}
+\rhead{\begin{picture}(0,0) \put(-85,-6){\includegraphics[scale=0.19]{logo_usm}} \end{picture}}
+
+%PIE DE PAGINA
+\lfoot{2018-S2} %MODIFICAR SEGÚN CORRESPONDA
+\rfoot{\thepage}
+\cfoot{\ }
+
+\pagestyle{fancy}
+
+\begin{document}
+
+	\begin{center}
+	    %MODIFICAR SEGÚN CORRESPONDA
+		{\Large Gestión de Investigación de Operaciones - ICS010}
+		%MODIFICAR SEGÚN CORRESPONDA
+		\par {\large Pauta Control N\grad 1 - Segundo Semestre 2018}
+	\end{center}
+
+	\begin{center}
+	    %MODIFICAR SEGÚN CORRESPONDA
+		Profesor: Humberto Villalobos Torres\\
+		%MODIFICAR SEGÚN CORRESPONDA
+		Ayudantes: Alexandra Gallardo Silva - Matías Schiaffino Tyrer
+	\end{center}
+	
+\section*{Ejercicio 1 (50 puntos)}
+
+Una compañía elabora dos productos diferentes. Uno de ellos requiere por unidad 1/4 de hora en labores de armado, 1/8 de hora en labores de control de calidad y USD 1.2 en materias primas. El otro producto requiere por unidad 1/3 de hora en labores de armado, 1/3 de hora en labores de control de calidad y USD 0.9 en materias primas. Dadas las actuales disponibilidades de personal en la compañía, existe a lo más un total de 90 horas para armado y 80 horas para control de calidad, cada día. El primer producto descrito tiene un valor de mercado (precio de venta) de USD 9.0 por unidad y para el segundo este valor corresponde a USD 8.0 por unidad. Adicionalmente, se ha estimado que el límite máximo de ventas diarias para el primer producto descrito es de 200 unidades, no existiendo un límite máximo de ventas diarias para el segundo producto.
+
+\begin{itemize}
+	\item[a)] Formule y resuelva gráficamente un modelo de Programación Lineal que permita maximizar las utilidades de la compañía.
+	
+	\begin{equation*}
+	x_{j}:\textup{Unidades diarias a producir del j-ésimo producto}
+	\end{equation*}
+	
+	\begin{equation*}
+	j:\left\{
+	\begin{array}{l l}
+	1 & \textup{Producto 1}\\
+	2 & \textup{Producto 2}\\
+	\end{array}
+	\right.
+	\end{equation*}
+	
+	\renewcommand{\arraystretch}{1.5}
+	\begin{equation*}
+	\begin{array}{l l}
+	\multicolumn{2}{c}{FO:\ max\ Z=(9-1.2)x_{1}+(8-0.9)x_{2}=7.8x_{1}+7.1x_{2}}\\
+	s/a & \\
+	\frac{1}{4}x_{1}+\frac{1}{3}x_{2}\leq 90 & (R_{1}-\textup{Limitación tiempo armado})\\
+	\frac{1}{8}x_{1}+\frac{1}{3}x_{2}\leq 80 & (R_{2}-\textup{Limitación tiempo control calidad})\\
+	x_{1}\leq 200 & (R_{3}-\textup{Limitación venta diaria producto 1})\\
+	x_{j}\geq 0,\ \forall\ j \in \{1,2\} & (\textup{No negatividad})\\
+	\end{array}
+	\end{equation*}
+	
+	\renewcommand{\arraystretch}{1.0}
+	\begin{table}[hbt]
+		\centering
+		\begin{tabular}{c | c}
+			\hline\hline
+			Punto & Valor FO\\
+			\hline
+			A(0,0) & 0\\
+			B(200,0) & 1.560\\
+			\textbf{C(200,120)} & \textbf{2.412}\\
+			D(80,210) & 2.115\\
+			E(0,240) & 1.704\\
+			\hline\hline
+		\end{tabular}
+	\end{table}
+	
+	\newpage
+	\begin{figure}[hbt]
+		\vspace{-0.5cm}
+		\centering
+		\begin{tikzpicture}[scale=1.6]
+		\begin{axis}[
+		grid=both,
+		axis lines=middle,
+		axis line style={->},
+		x label style={at={(axis cs:15,350)}},
+		y label style={at={(axis cs:350,15)}},
+		xmin=0, xmax=350,
+		ymin=0, ymax=350,
+		xtick distance=50,
+		ytick distance=50,
+		xlabel=$\scriptstyle x_{2}$,
+		ylabel=$\scriptstyle x_{1}$,
+		grid style={line width=.1pt, draw=gray!20},
+		major grid style={line width=.2pt,draw=gray!60},
+		minor tick num=4,
+		ticklabel style={font=\tiny},
+		]
+		
+		\addplot[
+		domain=0:350,
+		samples=100,
+		color=black
+		] {270 - 0.75*x};
+		
+		\node at (axis cs: 300,60) {$\scriptscriptstyle R_{1}$};
+		
+		\addplot[
+		domain=0:350,
+		samples=100,
+		color=black
+		] {240 - 0.375*x};
+		
+		\node at (axis cs: 300,140) {$\scriptscriptstyle R_{2}$};
+		
+		\addplot[
+		mark=none,
+		black,
+		line width=0.6pt,
+		]coordinates{
+		(200,0)
+		(200,350)
+		};
+		
+		\node at (axis cs: 210,320) {$\scriptscriptstyle R_{3}$};
+		
+		\addplot[
+		fill=gray!15,
+		fill opacity=0.8,
+		] coordinates{
+			(0,0)
+			(200,0)
+			(200,120)
+			(80,210)
+			(0,240)
+			(0,0)
+		};
+		
+		\addplot[
+		mark=*,
+		mark size=1pt,
+		mark options={draw=black, fill=black}
+		] coordinates{
+			(0,0)
+			(200,0)
+			(200,120)
+			(80,210)
+			(0,240)
+		};
+		
+		\addplot[
+		dashed,
+		domain=0:350,
+		samples=100,
+		color=black,
+		] {339.7183 - 1.0986*x};
+		
+		\node at (axis cs: 10,10) {\tiny A};
+		\node at (axis cs: 206,10) {\tiny B};
+		\node at (axis cs: 206,126) {\tiny C};
+		\node at (axis cs: 83,220) {\tiny D};
+		\node at (axis cs: 7,227) {\tiny E};
+		\node at (axis cs: 50,300) {\tiny FO};
+		\node at (axis cs: 87.5,100) {$\mathcal{F}$};
+		
+		\end{axis}
+		\end{tikzpicture}
+	\end{figure}
+	
+	\textbf{Respuesta:} La compañía debería elaborar 200 unidades de producto 1 y 120 unidades de producto 2, lo que le reportaría una utilidad máxima de USD 2.412.
+	
+	\item[b)] Considere que se pueden programar 10 horas en sobretiempo para labores de armado a un costo de USD 7.0 la hora. Sin reoptimizar, determine si es recomendable utilizar estas horas adicionales.
+	
+	\begin{table}[hbt]
+		\centering
+		\begin{tabular}{c c c c c | c c}
+			\hline\hline
+			\multirow{2}{*}{Restricción} & \multirow{2}{*}{$b_{1}$} & \multirow{2}{*}{Punto} & \multirow{2}{*}{Valor Restricción} & \multirow{2}{*}{Valor FO} & \multicolumn{2}{c}{Permisible}\\
+			\cline{6-7}
+			& & & & & Disminuir & Aumentar\\
+			\hline
+			\multirow{2}{*}{$R_{1}$} & \multirow{2}{*}{90} & max (200,165) & 105 & 2731.5 & \multirow{2}{*}{40} & \multirow{2}{*}{15}\\
+			& & min (200,0) & 50 & 1560 & & \\
+			\hline\hline
+		\end{tabular}
+	\end{table}
+	
+	\begin{equation*}
+	\pi_{1}=\frac{FO(max)-FO(min)}{R_{1}(max)-R_{1}(min)}=\frac{2731.5-1560}{105-50}=21.3
+	\end{equation*}
+	
+	\textbf{Respuesta:} Las 10 horas de sobretiempo están dentro del rango permisible aumentar de la restricción, por lo que el precio dual es válido. Luego, sí sería recomendable programar las horas de sobretiempo, ya que el costo por hora es inferior al beneficio adicional por cada hora extra.
+	
+	\item[c)] Determine e interprete el costo reducido de las unidades diarias para el primer producto.
+	
+	\textbf{Respuesta:} Por definición, el costo reducido de las variables de decisión es la variación que debería tener el coeficiente asociado a la variable en la función objetivo para que ésta sea considerada en la solución óptima. Sin embargo, ambas variables de decisión se encuentran consideradas en la solución del problema. Por lo tanto, el costo reducido de las variables de decisión es cero.
+\end{itemize}
+
+\section*{Ejercicio 2 (50 puntos)}
+
+Un inversionista está evaluando invertir en dos tipos de acciones, A y B, las que tienen una rentabilidad anual que asciende a a 20\% y 10\%, respectivamente. El inversionista tiene a lo más USD 21 millones para invertir y por experiencia sabe que debería invertir al menos USD 7 millones en acciones tipo B. Además, por diversificación de riesgo, lo invertido en acciones tipo A debe ser a lo más el doble de lo invertido en acciones tipo B.
+
+\begin{itemize}
+	\item[a)] Formule y resuelva gráficamente un modelo de Programación Lineal que optimice la rentabilidad anual de la inversión.
+	
+	\begin{equation*}
+	x_{j}:\textup{Dinero a invertir en acciones tipo j-ésima}
+	\end{equation*}
+	
+	\begin{equation*}
+	j:\left\{
+	\begin{array}{l l}
+	1 & \textup{Acciones tipo A}\\
+	2 & \textup{Acciones tipo B}\\
+	\end{array}
+	\right.
+	\end{equation*}
+	
+	\begin{equation*}
+	\begin{array}{l l}
+	\multicolumn{2}{c}{FO:\ max\ Z=0.2x_{1}+0.1x_{2}}\\
+	s/a & \\
+	x_{1}+x_{2}\leq 21 & (R_{1}-\textup{Limitación presupuesto})\\
+	x_{2}\geq 7 & (R_{2}-\textup{Requerimiento acciones tipo B})\\
+	x_{1}-2x_{2}\leq 0 & (R_{3}-\textup{Limitación acciones tipo A})\\
+	x_{j}\geq 0,\ \forall\ j \in \{1,2\} & (\textup{No negatividad})\\
+	\end{array}
+	\end{equation*}
+	
+	\begin{figure}[hbt]
+		\vspace{-0.5cm}
+		\centering
+		\begin{tikzpicture}[scale=1.6]
+		\begin{axis}[
+		grid=both,
+		axis lines=middle,
+		axis line style={->},
+		x label style={at={(axis cs:27,-0.5)}},
+		y label style={at={(axis cs:-0.5,27)}},
+		xmin=0, xmax=25,
+		ymin=0, ymax=25,
+		xtick distance=5,
+		ytick distance=5,
+		xlabel=$\scriptstyle x_{1}$,
+		ylabel=$\scriptstyle x_{2}$,
+		grid style={line width=.1pt, draw=gray!20},
+		major grid style={line width=.2pt,draw=gray!60},
+		minor tick num=4,
+		ticklabel style={font=\tiny},
+		]
+		
+		\addplot[
+		domain=0:25,
+		samples=100,
+		color=black
+		] {21 - x};
+		
+		\node at (axis cs: 5,17) {$\scriptscriptstyle R_{1}$};
+		
+		\addplot[
+		domain=0:25,
+		samples=100,
+		color=black
+		] {7};
+		
+		\node at (axis cs: 20,7.5) {$\scriptscriptstyle R_{2}$};
+		
+		\addplot[
+		domain=0:25,
+		samples=100,
+		color=black
+		] {0.5*x};
+		
+		\node at (axis cs: 23,12.5) {$\scriptscriptstyle R_{3}$};
+		
+		\addplot[
+		fill=gray!15,
+		fill opacity=0.8,
+		] coordinates{
+			(0,7)
+			(14,7)
+			(0,21)
+			(0,7)
+		};
+		
+		\addplot[
+		mark=*,
+		mark size=1pt,
+		mark options={draw=black, fill=black}
+		] coordinates{
+			(0,7)
+			(14,7)
+			(0,21)
+		};
+		
+		\addplot[
+		dashed,
+		domain=0:350,
+		samples=100,
+		color=black,
+		] {35 - 2*x};
+		
+		\node at (axis cs: 0.7,7.7) {\tiny A};
+		\node at (axis cs: 14.2,7.9) {\tiny B};
+		\node at (axis cs: 0.7,21.5) {\tiny C};
+		\node at (axis cs: 8,21) {\tiny FO};
+		\node at (axis cs: 5,11.5) {$\mathcal{F}$};
+		
+		\end{axis}
+		\end{tikzpicture}
+	\end{figure}
+	
+	\begin{table}[htb]
+		\centering
+		\begin{tabular}{c | c}
+			\hline\hline
+			Punto & Valor FO\\
+			\hline
+			A(0,7) & 0.7\\
+			\textbf{B(14,7)} & \textbf{3.5}\\
+			C(0,21) & 2.1\\
+			\hline\hline
+		\end{tabular}
+	\end{table}
+	
+	\textbf{Respuesta:} El inversionista debería invertir USD 14 millones en acciones tipo A y USD 7 millones en acciones tipo B para obtener una rentabilidad anual máxima de USD 3.5 millones.
+	
+	\item[b)] Determine cuánto pueden cambiar las rentabilidades de cada tipo de acción de tal forma que no se vea alterada la cantidad a invertir en cada una y se conserve el sentido económico.
+	
+	\begin{equation*}
+	\begin{split}
+	(1)&\ -\infty \leq \frac{c_{1}}{c_{2}} \leq -1\\
+	(2)&\ 0 \leq \frac{c_{1}}{c_{2}} \leq +\infty\\
+	\end{split}
+	\end{equation*}
+	
+	\textbf{Rentabilidad acción tipo A ($\mathbf{c_{1}}$)}
+	
+	\begin{equation*}
+	\begin{split}
+	(1.1)&\ -\infty \leq -\frac{c_{1}}{0.1} \leq -1\ \Rightarrow\ 0.1 \leq c_{1} \leq +\infty\\
+	(1.2)&\ 0 \leq -\frac{c_{1}}{0.1} \leq +\infty\ \Rightarrow\ -\infty \leq c_{1} \leq 0\\
+	\end{split}
+	\end{equation*}
+	
+	\textbf{Rentabilidad acción tipo B ($\mathbf{c_{2}}$)}
+	
+	\begin{equation*}
+	\begin{split}
+	(2.1)&\ -\infty \leq -\frac{0.2}{c_{2}} \leq -1\ \Rightarrow\ -1 \leq -\frac{c_{2}}{0.2} \leq 0\ \Rightarrow\ 0 \leq c_{2} \leq 0.2\\
+	(2.2)&\ 0 \leq -\frac{0.2}{c_{2}} \leq +\infty\ \Rightarrow\ 0 \leq -\frac{c_{2}}{0.2} \leq +\infty\ \Rightarrow\ -\infty \leq c_{2} \leq 0\\
+	\end{split}
+	\end{equation*}
+	
+	\textbf{Respuesta:} Como lo que se busca es maximizar rentabilidad, se evalúa sólo la variación donde esta es positiva. Las acciones tipo A pueden disminuir hasta una rentabilidad del 10\%, mientras que las tipo B pueden hacerlo hasta cero conservando la solución. Por otro lado, la rentabilidad de las acciones tipo A puede aumentar sin límite, pero las de tipo B sólo hasta un 20\%.
+	
+	\item[c)] Conservando el retorno de las acciones tipo A y la solución óptima actual, determine cuál debería ser el retorno de las acciones tipo B para que la rentabilidad total de la inversión sea de USD 4.2 millones.
+	
+	\begin{equation*}
+	0.2\cdot(14)+c_{2}\cdot(7)=4.2\ \Rightarrow\ c_{2}=0.2
+	\end{equation*}
+	
+	\textbf{Respuesta:} Un retorno del 20\% para las acciones tipo B se encuentra dentro del rango en el que puede variar. Luego, conservando todo lo demás constante, para obtener una rentabilidad anual de USD 4.2 millones el retorno de las acciones tipo B debería ser de un 20\%.
+\end{itemize}
+
+\end{document}
