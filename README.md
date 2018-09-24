@@ -10,7 +10,7 @@ Los objetivos de este respositorio son:
 
 ## Consideraciones
 
-1. Si se usa la plataforma Overleaf para compilar el código LaTeX, deben cargar la imagen "logo_usm.jpg" al proyecto que están utilizando. Si se usa otra plataforma, como una de escritorio (recomiendo Texstudio), deben cargar la imagen en la misma carpeta del archivo .tex o en una del directorio anterior que se llame "imagenes" (sin comillas y todo en minúsculas).
+1. Si se usa la plataforma Overleaf para compilar el código LaTeX, deben cargar la imagen `logo_usm.jpg` al proyecto que están utilizando. Si se usa otra plataforma, como una de escritorio (recomiendo Texstudio), deben cargar la imagen en la misma carpeta del archivo `.tex` o en una del directorio anterior que se llame `imagenes`.
 
 2. Todos los campos encerrados entre corchetes ("[]") en las plantillas deben ser modificados según corresponda.
 
