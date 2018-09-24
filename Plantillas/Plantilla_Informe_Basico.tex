@@ -1,0 +1,89 @@
+\documentclass[letterpaper,12pt,oneside]{article}
+\usepackage{titlesec} %títulos
+\usepackage{tikz} %gráficos en latex
+	\usetikzlibrary{datavisualization}
+	\usetikzlibrary{datavisualization.formats.functions}
+	\usetikzlibrary{shapes,arrows}
+\usepackage{pgfplots} %gráficos de funciones
+	\pgfplotsset{compat=1.3}
+\usepackage{geometry} %diseño de página
+\usepackage{setspace} %espaciado
+\usepackage[hidelinks]{hyperref} %hipervículos
+\usepackage{afterpage} %página en blanco
+\usepackage[spanish,es-noshorthands]{babel} %español con tikz
+\usepackage[utf8]{inputenc} %input caracteres especiales
+\usepackage{fontenc} %output caracteres especiales
+\usepackage[mathscr]{eucal} %otras fuentes
+\usepackage{graphicx} %gráficos
+	\graphicspath{{../imagenes/}} %ruta de imágenes
+\usepackage{pst-node}
+\usepackage{fancyhdr}%encabezado y pie de página
+\usepackage{amsmath} %modo matemático
+\usepackage{amssymb} %símbolos
+\usepackage{wasysym} %más símbolos
+\usepackage{verbatim} %comentarios
+\usepackage{multicol} %múltiples columnas en tablas
+\usepackage{array} %tablas en modo matemático
+\usepackage{wrapfig} %texto alrededor de ambientes flotantes
+\usepackage{enumitem} %listas
+\usepackage{multirow} %múltiples filas en tablas
+
+%CONFIGURACIÓN DE PÁGINA	
+\setlength{\topmargin}{20pt}
+\setlength{\headheight}{50.8pt}
+\setlength{\marginparwidth}{29pt}
+\setlength{\textwidth}{490pt}
+\setlength{\voffset}{-60pt}
+\setlength{\hoffset}{-30pt}
+\setlength{\textheight}{606pt}
+
+%INDENTACIÓN DE PÁRRAFOS (SANGRÍA)
+\setlength{\parindent}{0pt}
+
+%ESPACIO ENTRE PÁRRAFOS (no afecta título)
+\setlength{\parskip}{15pt}
+
+%INTERLINEADO (afecta título)
+\renewcommand{\baselinestretch}{1.5}
+
+%CREACION COMANDO SIGNO DE GRADO
+\newcommand{\grad}{$^{\circ}$}
+
+%ENCABEZADO
+\lhead{\textbf{Universidad Técnica Federico Santa María} \\ Departamento de Ingeniería Comercial}
+\rhead{\includegraphics[scale=0.19]{logo_usm.jpg}}
+
+%PIE DE PAGINA
+\lfoot{\ }
+\rfoot{\thepage}
+\cfoot{\ }
+
+%ENCABEZADO Y PIE DE PÁGINA A TODO EL DOCUMENTO
+\pagestyle{fancy}
+
+\begin{document}
+
+{\setlength{\parskip}{5pt} %espacio entre párrafos título
+\begin{titlepage}
+	\centering
+	\includegraphics[width=0.15\textwidth]{logo_usm1}\par\vspace{1cm}
+	{\scshape\LARGE Universidad Técnica Federico Santa María \par}
+	{\scshape\LARGE Departamento de Ingeniería Comercial \par}
+	\vspace{0.5cm}
+	{\scshape\Large [Nombre Curso] - [Sigla Curso]\par}
+	\vspace{0.75cm}
+	{\huge\bfseries [Título Informe]\par}
+	\vspace{1cm}
+	{\Large\itshape [Integrante 1]\par
+	[Integrante 2]\par
+	[Integrante n]\par}
+	\vfill
+	Prof. [Nombre Profesor] \textsc{Naranjo}
+	\vfill
+	%fecha al final de la página
+	{\large [Día] de [mes] de [Año]\par}
+\end{titlepage}}
+
+[CUERPO DEL DOCUMENTO]
+
+\end{document}
