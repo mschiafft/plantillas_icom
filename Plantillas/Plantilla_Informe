@@ -1,0 +1,191 @@
+\documentclass[letterpaper,11pt,oneside]{article}
+\usepackage{geometry} %diseño de páginas
+\usepackage{tikz} %gráficos en latex
+\usepackage{pgfplots} %gráficos de funciones
+	\pgfplotsset{compat=1.3}
+\usepackage[hidelinks]{hyperref} %para hipervínculos
+\usepackage[spanish]{babel} %español
+\usepackage[utf8]{inputenc} %input caracteres especiales
+\usepackage{fontenc} %output caracteres especiales
+\usepackage{graphicx} %gráficas
+	\graphicspath{{../imagenes/}} %ruta de imágenes
+\usepackage{verbatim} %comentarios
+\usepackage{setspace} %espaciado
+\usepackage{lipsum} %texto de relleno para pruebas
+\usepackage{apacite} %cita APA
+\usepackage{wrapfig} %texto alrededor de flotantes
+\usepackage{caption} %leyendas de tablas y figuras
+\usepackage{amsmath} %ambiente equation
+\usepackage{amssymb} %símbolos
+\usepackage{wasysym} %más símbolos
+\usepackage{multicol} %múltiples columnas en tablas
+\usepackage{multirow} %múltiples filas en tablas
+\usepackage{adjustbox} %ajustar tabla
+\usepackage{enumitem} %listas
+\usepackage{array} %tablas
+\usepackage{listings}
+\usepackage{appendix} %apéndice (anexo)
+\usepackage{afterpage} %página en blanco
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{wrapfig}
+\usepackage[sectionbib]{natbib}
+	\renewcommand{\bibsection}{\section{\refname}}
+	
+%CONFIGURACIÓN DE PÁGINA
+\setlength{\headheight}{51pt}
+\setlength{\topmargin}{-65pt}
+\setlength{\headsep}{25pt}
+\setlength{\textheight}{620pt}
+\setlength{\voffset}{15pt}
+
+%CENTRAR TÍTULOS
+\newcommand{\csection}[1]{{\centering{\section{#1}}}}
+
+%INTERLINEADO DE 2
+\renewcommand{\baselinestretch}{1.5}
+
+%CREACION COMANDO SIGNO DE GRADO
+\newcommand{\grad}{$^{\circ}$}
+
+%USAR BULLET POINT EN EL PRIMER ITEM
+\renewcommand{\labelitemi}{$\bullet$}
+
+%USAR CUADRADO EN EL SEGUNDO ITEM
+\renewcommand{\labelitemii}{\tiny$\blacksquare$}
+
+%CAMBIA NOMBRE DE ANEXO EN TABLA DE CONTENIDOS
+\renewcommand{\appendixtocname}{ANEXO}
+
+%CAMBIA NOMBRE DE ANEXO EN PÁGINA DE ANEXO
+\renewcommand{\appendixpagename}{ANEXO}
+\renewcommand{\appendixpage}{{\centering{\section{\appendixpagename}}}}
+
+%HYPERREF ANEXO
+\newcommand{\anex}[1]{\hyperref[#1]{Anexo \ref{#1}}}
+
+%COMANDO CITA LARGA (MÁS DE 40 PALABRAS - SE PUEDE MODIFICAR)
+\newcommand{\longcite}[2]{
+\begin{center}
+	\begin{minipage}{0.9\linewidth}
+		\vspace{5pt}
+		{\small\textit{#1
+			}#2}
+		\vspace{5pt}
+	\end{minipage}
+\end{center}
+}
+
+%ENCABEZADO
+\lhead{\textbf{Universidad Técnica Federico Santa María} \\ Departamento de Ingeniería Comercial}
+\rhead{\includegraphics[scale=0.19]{logo_usm.jpg}}
+
+%PIE DE PAGINA
+\lfoot{\ }
+\cfoot{\thepage}
+\rfoot{\ }
+
+\pagestyle{fancy}
+
+
+\begin{document}
+
+%CAMBIAR TÍTULO DE ÍNDICE
+\renewcommand\contentsname{ÍNDICE}
+
+%CAMBIA TÍTULO LISTA DE TABLAS
+\renewcommand{\listtablename}{ÍNDICE DE TABLAS}
+
+%CAMBIA TÍTULO LISTA DE FIGURAS
+\renewcommand{\listfigurename}{ÍNDICE DE ILUSTRACIONES}
+
+%CAMBIA TÍTULO DE REFERENCIAS
+\renewcommand\refname{REFERENCIAS}
+%\renewcommand\tocbibname{REFERENCIAS}
+
+%CAMBIA PREFIJO CUADRO POR TABLA
+\renewcommand{\tablename}{Tabla}
+
+%CAMBIA TEXTO DE REFERENCIA DE TABLA
+\renewcommand*{\tableautorefname}{Tabla}
+
+%CAMBIA PREFIJO IMAGEN POR FIGURA
+\renewcommand{\figurename}{Figura}
+
+%CAMBIA TEXTO DE REFERENCIA DE FIGURA
+\renewcommand*{\figureautorefname}{Figura}
+
+%CAMBIA TEXTO DE REFERENCIA DE ECUACIÓN
+\renewcommand*{\equationautorefname}{Ecuación}
+
+\begin{titlepage}
+    \centering
+	\begin{figure}[htb]
+	    \centering
+		\includegraphics[width=6cm]{logo_usm1}
+	\end{figure}
+	{\textbf{UNIVERSIDAD TÉCNICA FEDERICO SANTA MARÍA} \par}
+	{\textbf{DEPARTAMENTO DE INGENIERÍA COMERCIAL} \par}
+    \vspace{1cm}
+	{\textbf{[TÍTULO INFORME]} \par}
+	\vspace{1cm}
+	{\textbf{INFORME PARA EL CURSO DE [NOMBRE CURSO]} \par}
+	\vspace{1cm}
+	{\textbf{AUTOR} \par}
+	{\textbf{[NOMBRE AUTOR 1]} \par}
+	{\textbf{[NOMBRE AUTOR 2]} \par}
+	\vspace{1cm}
+	{\textbf{PROFESOR} \par} 
+	{\textbf{[NOMBRE PROFESOR]} \par}
+	\vfill
+	{\textbf{VALPARAÍSO, [DÍA] DE [MES], [AÑO]} \par}
+\end{titlepage}
+
+%INDENTACIÓN (SANGRÍA) 
+\setlength{\parindent}{30pt}
+
+%ESPACIO ENTRE PÁRRAFOS
+\setlength{\parskip}{15pt}
+
+{\centering{\tableofcontents\thispagestyle{plain}}}
+\addcontentsline{toc}{section}{ÍNDICE}
+
+\newpage
+{\centering{\listoftables\thispagestyle{plain}}}
+\addcontentsline{toc}{section}{ÍNDICE DE TABLAS}
+
+\newpage
+{\centering{\listoffigures\thispagestyle{plain}}}
+\addcontentsline{toc}{section}{ÍNDICE DE ILUSTRACIONES}
+
+\newpage
+\csection{PRIMER TÍTULO}
+
+\lipsum[1-4]
+
+Prueba de citas en formato APA: \citep{Palma2016}, \citep{Wilkinson2015}.
+
+\subsection{SUBTÍTULO}
+
+\newpage
+\csection{SEGUNDO TÍTULO}
+
+\subsection{OTRO SUBTÍTULO}
+
+\newpage
+\bibliographystyle{apacite}
+{\centering{\bibliography{BibTest.bib}}}
+
+\newcounter{appsection}
+\setcounter{appsection}{\arabic{section}}
+
+\newpage
+\appendix
+\setcounter{section}{\arabic{appsection}}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\setthesection}{\arabic{section}}
+\appendixpage
+
+\subsection{PRIMER ANEXO}
+
+\end{document}
