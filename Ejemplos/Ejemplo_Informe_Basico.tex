@@ -36,11 +36,15 @@
 \setlength{\voffset}{-60pt}
 \setlength{\hoffset}{-30pt}
 \setlength{\textheight}{606pt}
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{5pt}
 
-%INTERLINEADO
-\renewcommand{\baselinestretch}{1.05}
+%INDENTACIÓN DE PÁRRAFOS (SANGRÍA)
+\setlength{\parindent}{0pt}
+
+%ESPACIO ENTRE PÁRRAFOS (no afecta título)
+\setlength{\parskip}{15pt}
+
+%INTERLINEADO (afecta título)
+\renewcommand{\baselinestretch}{1.5}
 
 %CREACION COMANDO SIGNO DE GRADO
 \newcommand{\grad}{$^{\circ}$}
@@ -59,16 +63,17 @@
 
 \begin{document}
 
+{\setlength{\parskip}{5pt} %espacio entre párrafos título
 \begin{titlepage}
 	\centering
 	\includegraphics[width=0.15\textwidth]{logo_usm1}\par\vspace{1cm}
 	{\scshape\LARGE Universidad Técnica Federico Santa María \par}
 	{\scshape\LARGE Departamento de Ingeniería Comercial \par}
-	\vspace{1cm}
+	\vspace{0.5cm}
 	{\scshape\Large Gestión Estratégica II - ICS028\par}
-	\vspace{1.5cm}
+	\vspace{0.75cm}
 	{\huge\bfseries Caso The Marvel Way: Restoring a Blue Ocean\par}
-	\vspace{2cm}
+	\vspace{1cm}
 	{\Large\itshape Matías Schiaffino Tyrer\par
 	Mauricio Mora Soto\par
 	Victor Reyes Plané\par}
@@ -77,7 +82,7 @@
 	\vfill
 	%fecha al final de la página
 	{\large 9 de agosto de 2018\par}
-\end{titlepage}
+\end{titlepage}}
 
 Marvel es una firma con fundada en 1939, sin embargo, fue en los años 60, con la introducción del liderazgo creativo de Stan Lee, Jack Kirby y Steve Ditko, cuando lograron crear un océano azul en la industria de los comics. Fue en esta época cuando Marvel logró competir casi a la par con DC, obteniendo ganancias sobre los 6 millones de comics por mes versus los 7 millones de cómics que vendía DC.
 
